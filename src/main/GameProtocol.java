@@ -45,4 +45,6 @@ public class GameProtocol {
 
         System.out.println("Welcome " + coolName + ",your journey starts here! You have " + getNumberOfCoins() + "coins :)");
     }
+
+    //test
 }
