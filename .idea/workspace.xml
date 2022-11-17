@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9bc9ee3-1b70-42ea-bda4-f01f971775ba" name="Changes" comment="test1">
-      <change afterPath="$PROJECT_DIR$/src/main/GameProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Gamestate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/npc/Npc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
+    <list default="true" id="d9bc9ee3-1b70-42ea-bda4-f01f971775ba" name="Changes" comment="Spieler-Erstellung implementiert">
+      <change afterPath="$PROJECT_DIR$/src/main/CombatHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Storyyy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/npc/Shrimp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GameProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Gamestate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Gamestate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/npc/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,7 +56,7 @@
       <updated>1668610016253</updated>
       <workItem from="1668610018776" duration="1816000" />
       <workItem from="1668616178925" duration="16000" />
-      <workItem from="1668685315753" duration="7824000" />
+      <workItem from="1668685315753" duration="11090000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <created>1668610380856</created>
@@ -61,7 +65,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668610380856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Spieler-Erstellung implementiert">
+      <created>1668699140999</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668699140999</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Spieler-Erstellung implementiert">
+      <created>1668699232824</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668699232824</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test1" />
+    <MESSAGE value="Spieler-Erstellung implementiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spieler-Erstellung implementiert" />
   </component>
 </project>

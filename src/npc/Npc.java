@@ -1,10 +1,19 @@
 package npc;
 
-public class Npc {
+public abstract class Npc {
+    private int health;
 
-  public Npc(){
-      int i = 0;
-  }
+    public Npc() {
+
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void reduceHealth(int reductionValue) {
+        health -= reductionValue;
+    }
 
 
 }

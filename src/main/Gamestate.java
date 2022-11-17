@@ -4,5 +4,7 @@ public enum Gamestate {
 
     WAITINGFORRESPONSE,
     RUNNING,
-    FINISHED
+    FINISHED,
+    COMBAT,
+    STORYTELLING
 }

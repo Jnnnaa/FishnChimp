@@ -7,25 +7,35 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GameProtocol {
     private Gamestate gamestate;
-
-    private Player chosenPlayer;
-
-
+    private Player player;
+    CombatHandler combatHandler;
 
 
     public GameProtocol() {
         gamestate = Gamestate.RUNNING;
+
     }
 
-    private void gameLoop(){
+    public void startGame() {
+        gamestate = Gamestate.STORYTELLING;
+        gameLoop();
+    }
 
-        while (gamestate == Gamestate.RUNNING) {
+    private void gameLoop() {
+        while (player.getIsAlive()) {
+            if (gamestate == Gamestate.STORYTELLING) {
 
+
+            } else if (gamestate == Gamestate.COMBAT) {
+                combatHandler.startCombat();
+            }
         }
-        }
+    }
+
     private int getNumberOfCoins() {
         return ThreadLocalRandom.current().nextInt(5, 85);
     }
+
     public void choosePlayer() {
 
         System.out.println("Enter cool name");
@@ -41,10 +51,9 @@ public class GameProtocol {
         }
         int yourHeight = Integer.parseInt(heightString);
 
-        chosenPlayer = new Player(coolName, yourHeight, getNumberOfCoins());
+        player = new Player(coolName, yourHeight, getNumberOfCoins());
 
         System.out.println("Welcome " + coolName + ",your journey starts here! You have " + getNumberOfCoins() + "coins :)");
     }
 
-    //test
 }
