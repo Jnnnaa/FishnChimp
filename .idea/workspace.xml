@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9bc9ee3-1b70-42ea-bda4-f01f971775ba" name="Changes" comment="Spieler-Erstellung implementiert">
-      <change afterPath="$PROJECT_DIR$/src/main/CombatHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Storyyy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/npc/Shrimp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Gamestate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Gamestate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/npc/Npc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CombatHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
