@@ -1,14 +1,18 @@
 package main;
 
 import player.Player;
+import player.WeaponType;
 
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GameProtocol {
     private Gamestate gamestate;
-    private Player player;
+    Player player;
+    public String coolName;
     CombatHandler combatHandler;
+
+
 
 
     public GameProtocol() {
@@ -32,15 +36,20 @@ public class GameProtocol {
         }
     }
 
-    private int getNumberOfCoins() {
+    public int getNumberOfCoins() {
         return ThreadLocalRandom.current().nextInt(5, 85);
     }
+    public WeaponType getWeapon(){
+        return weapon;
+    }
+    public WeaponType setWeapon(WeaponType weaponType){}
 
     public void choosePlayer() {
 
         System.out.println("Enter cool name");
         Scanner sc = new Scanner(System.in);
         String coolName = sc.next();
+        this.coolName = coolName;
 
         System.out.println("Wie groß bist du?");
         String heightString = sc.next();
@@ -51,7 +60,7 @@ public class GameProtocol {
         }
         int yourHeight = Integer.parseInt(heightString);
 
-        player = new Player(coolName, yourHeight, getNumberOfCoins());
+        player = new Player(coolName, yourHeight, getNumberOfCoins(), getWeapon() );
 
         System.out.println("Welcome " + coolName + ",your journey starts here! You have " + getNumberOfCoins() + " coins :)");
     }

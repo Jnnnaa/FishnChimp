@@ -9,11 +9,13 @@ public class Player {
 
     private int health; //Combat health
     private int height;
+    private WeaponType weapon;
 
-    public Player(String name, int height, int numberOfCoins) {
+    public Player(String name, int height, int numberOfCoins, WeaponType weapon ) {
         this.numberOfCoins = numberOfCoins;
         this.name = name;
         this.height = height;
+        this.weapon = weapon;
     }
 
     public void reduceHealth(int reductionValue) {
