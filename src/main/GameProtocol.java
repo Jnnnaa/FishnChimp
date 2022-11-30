@@ -27,7 +27,7 @@ public class GameProtocol {
 
 
             } else if (gamestate == Gamestate.COMBAT) {
-                combatHandler.startCombat();
+                combatHandler.startCombat(gamestate, player);
             }
         }
     }
@@ -53,7 +53,7 @@ public class GameProtocol {
 
         player = new Player(coolName, yourHeight, getNumberOfCoins());
 
-        System.out.println("Welcome " + coolName + ",your journey starts here! You have " + getNumberOfCoins() + "coins :)");
+        System.out.println("Welcome " + coolName + ",your journey starts here! You have " + getNumberOfCoins() + " coins :)");
     }
 
 }
