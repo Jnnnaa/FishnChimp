@@ -1,10 +1,10 @@
 package main;
 
-import player.WeaponType;
+//import player.WeaponType;
 
 import java.util.Scanner;
 
-public class Storyyy extends GameProtocol{
+public class Storyyy {
 
     /**
      * the method separates the string in substrings(length<=15).
@@ -21,6 +21,7 @@ public class Storyyy extends GameProtocol{
                     String sub_str_1 = comeOnPutSomeStringInHere.substring(0, i);
                     System.out.println(sub_str_1);
                     comeOnPutSomeStringInHere = originalString.replace(0, i + 1, "").toString();
+                    i=50;
                 }
             }
         }
@@ -43,7 +44,7 @@ public class Storyyy extends GameProtocol{
             separateString(storyOfOrigin);
         }
 
-        String helpRequest = "Oh no, the evil fish murdered our new king and stolen the magical banana. Please, " + coolName+ " save our tribe and return the banana.";
+        String helpRequest = "Oh no, the evil fish murdered our new king and stolen the magical banana. Please, " + "name1 " + " save our tribe and return the banana.";
         separateString(helpRequest);
 
         System.out.println("Do You accept this terrific adventure? Enter Yes or No.");
@@ -73,13 +74,16 @@ public class Storyyy extends GameProtocol{
         }
         Scanner sc = new Scanner(System.in);
         String yourWeapon = sc.next();
-        if(yourWeapon.matches("Sword") {
+        if(yourWeapon.matches("Sword")) {
             weapon = setWeapon(WeaponType.SWORD);
         }
         else if(yourWeapon.matches("Gun")) {
             weapon = setWeapon(WeaponType.GUN);
         } else { weapon = setWeapon(WeaponType.SLINGSHOT); }
+
+
     }
+}
     //Anfangstext, der nachdem der Spieler erstellt ist erscheint
     // Auswahl ob die Geschichte begonnen werden soll
     //Möglichkeiten zu Station 1 zu gehen (oder Waffen zu kaufen)
@@ -91,4 +95,4 @@ public class Storyyy extends GameProtocol{
         //
 
 
-}
+

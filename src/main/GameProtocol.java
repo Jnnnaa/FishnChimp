@@ -1,7 +1,7 @@
 package main;
 
 import player.Player;
-import player.WeaponType;
+//import player.WeaponType;
 
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -12,12 +12,13 @@ public class GameProtocol {
     public String coolName;
     CombatHandler combatHandler;
 
+    public Storyyy storyyy = new Storyyy();;
+
 
 
 
     public GameProtocol() {
         gamestate = Gamestate.RUNNING;
-
     }
 
     public void startGame() {
@@ -39,10 +40,7 @@ public class GameProtocol {
     public int getNumberOfCoins() {
         return ThreadLocalRandom.current().nextInt(5, 85);
     }
-    public WeaponType getWeapon(){
-        return weapon;
-    }
-    public WeaponType setWeapon(WeaponType weaponType){}
+
 
     public void choosePlayer() {
 
@@ -60,7 +58,7 @@ public class GameProtocol {
         }
         int yourHeight = Integer.parseInt(heightString);
 
-        player = new Player(coolName, yourHeight, getNumberOfCoins(), getWeapon() );
+        player = new Player(coolName, yourHeight, getNumberOfCoins(), weapon);
 
         System.out.println("Welcome " + coolName + ",your journey starts here! You have " + getNumberOfCoins() + " coins :)");
     }

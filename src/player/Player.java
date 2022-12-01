@@ -15,8 +15,10 @@ public class Player {
         this.numberOfCoins = numberOfCoins;
         this.name = name;
         this.height = height;
-        this.weapon = weapon;
+        //this.weapon = weapon;
     }
+
+
 
     public void reduceHealth(int reductionValue) {
         health -= reductionValue;
@@ -24,5 +26,11 @@ public class Player {
 
     public boolean getIsAlive() {
         return isAlive;
+    }
+
+    public WeaponType getWeapon(){
+        return weapon;
+    }
+    public void setWeapon(WeaponType weaponType){
     }
 }
