@@ -1,5 +1,7 @@
 package player;
 
+import item.Item;
+
 public class Player {
     private int numberOfCoins;
     private String name;
