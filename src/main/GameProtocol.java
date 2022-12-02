@@ -1,7 +1,6 @@
 package main;
 
-import item.Stick;
-import item.Weapon;
+import item.*;
 import player.Player;
 //import player.WeaponType;
 
@@ -74,9 +73,10 @@ public class GameProtocol {
         }
 
         Weapon weapon = switch (weaponNumber) {
-            case "1": new Stick();
-            case "2": new Stone();
-            case "3": new Watergun();
+            case "1" -> new Stick();
+            case "2" -> new Stone();
+            case "3" -> new Watergun();
+            default -> new Hands();
         };
 
         player = new Player(coolName, yourHeight, getNumberOfCoins(), weapon);

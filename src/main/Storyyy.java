@@ -60,7 +60,7 @@ public class Storyyy {
      * First action is to choose a weapon. Choices based on numberOfCoins: Sword, Gun, Slingshot
      * If it works, actualises the parameter of the player object
      */
-    public void firstQuestChooseWeapon(Player player) {
+    /*public void firstQuestChooseWeapon(Player player) {
         System.out.println("Choose weapon.");
         String weaponShop;
         if(getNumberOfCoins() <= 13 ) {
@@ -85,6 +85,8 @@ public class Storyyy {
 
 
     }
+
+     */
 }
     //Anfangstext, der nachdem der Spieler erstellt ist erscheint
     // Auswahl ob die Geschichte begonnen werden soll
