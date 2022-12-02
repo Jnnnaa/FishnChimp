@@ -2,6 +2,8 @@ package main;
 
 //import player.WeaponType;
 
+import player.Player;
+
 import java.util.Scanner;
 
 public class Storyyy {

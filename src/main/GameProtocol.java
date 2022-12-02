@@ -60,22 +60,23 @@ public class GameProtocol {
         }
         int yourHeight = Integer.parseInt(heightString);
 
-        System.out.println("Wähle eine Start-Waffe:");
+        System.out.println("Choose your first weapon:");
 
-        System.out.println("1. Stock");
-        System.out.println("2. Stein");
-        System.out.println("3. Wassserpistole");
+        System.out.println("1. Stick");
+        System.out.println("2. Stone");
+        System.out.println("3. Watergun");
 
         String weaponNumber = sc.next();
 
-        while (!weaponNumber.matches("[0-9]*")) {
-            System.out.println("Invalid number");
+        while (!weaponNumber.matches("1+2+3")) {
+            System.out.println("Invalid number, again:");
             weaponNumber = sc.next();
         }
 
         Weapon weapon = switch (weaponNumber) {
-            case "1": Stick
-
+            case "1": new Stick();
+            case "2": new Stone();
+            case "3": new Watergun();
         };
 
         player = new Player(coolName, yourHeight, getNumberOfCoins(), weapon);
