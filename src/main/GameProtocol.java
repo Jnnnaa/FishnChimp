@@ -1,5 +1,6 @@
 package main;
 
+import item.Stick;
 import player.Player;
 //import player.WeaponType;
 
@@ -57,6 +58,24 @@ public class GameProtocol {
             heightString = sc.next();
         }
         int yourHeight = Integer.parseInt(heightString);
+
+        System.out.println("Wähle eine Start-Waffe:");
+
+        System.out.println("1. Stock");
+        System.out.println("2. Stein");
+        System.out.println("3. Wassserpistole");
+
+        String weaponNumber = sc.next();
+
+        while (!weaponNumber.matches("[0-9]*")) {
+            System.out.println("Invalid number");
+            weaponNumber = sc.next();
+        }
+
+        Weapon weapon = switch (weaponNumber) {
+            case "1": Stick
+
+        };
 
         player = new Player(coolName, yourHeight, getNumberOfCoins(), weapon);
 
