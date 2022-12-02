@@ -8,8 +8,9 @@ public interface Weapon {
 
     private void setMoveTypes(){};
 
+    public MoveTypes[] getMoves();
 
-    public MoveTypes getMoves();
+    public MoveTypes getMoveByIndex();
 
 
 
