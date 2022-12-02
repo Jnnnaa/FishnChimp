@@ -22,7 +22,9 @@ public class CombatHandler {
     }
 
     private void playerTurn(Player player) {
-
+        System.out.println("Your Turn!");
+        System.out.println("Current weapon:" + player.getWeapon().toString());
+        System.out.println("Change Weapon?");
     }
 
 

@@ -6,16 +6,16 @@ public class Player {
     private boolean isAlive = true;
     private int health; //Combat health
     private int height;
-    private WeaponType weapon;
     private Item[] inventory = new Item[10];
+
 
     private Weapon activeWeapon;
 
-    public Player(String name, int height, int numberOfCoins, WeaponType weapon ) {
+    public Player(String name, int height, int numberOfCoins, Weapon weapon ) {
         this.numberOfCoins = numberOfCoins;
         this.name = name;
         this.height = height;
-        this.weapon = weapon;
+        this.activeWeapon = weapon;
     }
 
     public void reduceHealth(int reductionValue) {
@@ -27,12 +27,14 @@ public class Player {
     }
 
     public void setActiveWeapon(Weapon weapon) {
-        this.activeWeapon = weapon;;
+        this.activeWeapon = weapon;
     }
 
-    public WeaponType getWeapon(){
+    public Weapon getWeapon(){
         return weapon;
     }
-    public void setWeapon(WeaponType weaponType){
+
+    public void setActiveWeapon(Weapon weapon){
+        this.activeWeapon = weapon;
     }
 }

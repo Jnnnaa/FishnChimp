@@ -1,4 +1,4 @@
 package item;
 
-public class Stick extends Item implements Weapon{
+public class Stick extends Item implements Weapon {
 }
