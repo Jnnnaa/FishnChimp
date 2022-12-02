@@ -10,7 +10,7 @@ public class Player {
     private int health; //Combat health
     private int height;
     private Item[] inventory = new Item[10];
-
+    private int armor;
 
     private Weapon activeWeapon;
 
@@ -19,10 +19,12 @@ public class Player {
         this.name = name;
         this.height = height;
         this.activeWeapon = weapon;
+        health = 100;
+        armor = 0;
     }
 
     public void reduceHealth(int reductionValue) {
-        health -= reductionValue;
+
     }
 
     public boolean getIsAlive() {

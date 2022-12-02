@@ -1,7 +1,9 @@
 package main;
 
+import npc.Attack;
 import npc.Enemy;
 import npc.Entitystate;
+import npc.Shrimp;
 import player.Player;
 
 public class CombatHandler {
@@ -29,15 +31,26 @@ public class CombatHandler {
 
 
     private Enemy[] initEnemys() {
-        int numberOfEnemys = 5;
-        return new Enemy[numberOfEnemys];
+        return new Enemy[] {new Shrimp()};
     }
 
     private void enemyTurn(Player player) {
 
         for (int i = 0; i < enemys.length; i++) {
             if (enemys[i].getEntitystate() == Entitystate.READY) {
+                Attack attack = enemys[i].getRandomAttack();
+                System.out.println("You got " + switch(attack) {
+                    case HIT -> "hit";
+                    case BITE -> "bit";
+                    case KICK -> "kicked";
+                    case FLAP -> "flapped";
+                    case POISON -> "poisoned";
+                } + "!");
+                player.reduceHealth(enemys[i].getDamageOfAttack(attack));
 
+                if (player.getIsAlive()) {
+
+                }
             }
         }
     }

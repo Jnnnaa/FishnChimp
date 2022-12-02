@@ -3,6 +3,7 @@ package npc;
 public abstract class Npc {
     private int health;
     private int armor;
+    protected int level;
 
     /**
      * constructor
