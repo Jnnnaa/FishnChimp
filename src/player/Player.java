@@ -1,6 +1,7 @@
 package player;
 
 import item.Item;
+import item.Weapon;
 
 public class Player {
     private int numberOfCoins;
@@ -33,10 +34,6 @@ public class Player {
     }
 
     public Weapon getWeapon(){
-        return weapon;
-    }
-
-    public void setActiveWeapon(Weapon weapon){
-        this.activeWeapon = weapon;
+        return activeWeapon;
     }
 }

@@ -1,6 +1,7 @@
 package main;
 
 import item.Stick;
+import item.Weapon;
 import player.Player;
 //import player.WeaponType;
 
