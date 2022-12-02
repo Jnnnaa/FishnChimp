@@ -16,4 +16,7 @@ public class Stone extends Item implements Weapon{
     public MoveTypes[] getMoves() {
         return moveTypes;
     }
+
+
+
 }

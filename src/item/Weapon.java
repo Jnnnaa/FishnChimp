@@ -5,13 +5,15 @@ package item;
  */
 public interface Weapon {
 
+    MoveTypes[] moveTypes = null;
 
     private void setMoveTypes(){};
 
     public MoveTypes[] getMoves();
 
-    public MoveTypes getMoveByIndex();
+    public int getDamage(WeaponType weapon, MoveTypes moveTypes);
 
+    private void setDamage(){};
 
 
 }
