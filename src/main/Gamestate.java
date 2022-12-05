@@ -6,5 +6,6 @@ public enum Gamestate {
     RUNNING,
     FINISHED,
     COMBAT,
-    STORYTELLING
+    STORYTELLING,
+    PLAYER_DIED
 }

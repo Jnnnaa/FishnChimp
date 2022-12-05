@@ -24,7 +24,10 @@ public class Player {
     }
 
     public void reduceHealth(int reductionValue) {
-
+        if (health-reductionValue <= 0) {
+            health = 0;
+            isAlive = false;
+        }
     }
 
     public boolean getIsAlive() {

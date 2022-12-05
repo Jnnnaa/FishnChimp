@@ -17,13 +17,18 @@ public class CombatHandler {
     }
 
     private void combatLoop(Gamestate gamestate, Player player) {
+        boolean playerTurn = true;
         while (gamestate == Gamestate.COMBAT) {
-            playerTurn(player);
-            enemyTurn(player);
+            if (playerTurn) {
+                playerTurn(player, gamestate);
+            } else {
+                enemyTurn(player, gamestate);
+            }
+            playerTurn = !playerTurn;
         }
     }
 
-    private void playerTurn(Player player) {
+    private void playerTurn(Player player, Gamestate gamestate) {
         System.out.println("Your Turn!");
         System.out.println("Current weapon:" + player.getWeapon().toString());
         System.out.println("Change Weapon?");
@@ -34,7 +39,7 @@ public class CombatHandler {
         return new Enemy[] {new Shrimp()};
     }
 
-    private void enemyTurn(Player player) {
+    private void enemyTurn(Player player, Gamestate gamestate) {
 
         for (int i = 0; i < enemys.length; i++) {
             if (enemys[i].getEntitystate() == Entitystate.READY) {
@@ -48,8 +53,8 @@ public class CombatHandler {
                 } + "!");
                 player.reduceHealth(enemys[i].getDamageOfAttack(attack));
 
-                if (player.getIsAlive()) {
-
+                if (!player.getIsAlive()) {
+                    gamestate = Gamestate.PLAYER_DIED;
                 }
             }
         }
