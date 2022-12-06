@@ -15,5 +15,9 @@ public interface Weapon {
 
     private void setDamage(){};
 
+    public MoveTypes getMoveByIndex(int i);
+
+    public String getName();
+
 
 }

@@ -1,5 +1,6 @@
 package main;
 
+import item.MoveTypes;
 import npc.*;
 import player.Player;
 
@@ -38,12 +39,12 @@ public class CombatHandler {
 
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-        while (input.matches("1+2+3")){
+        while (!input.matches("1+2+3")){
             System.out.println("Invalid number, again:");
             input = sc.nextLine();
         }
         switch (input) {
-            case "1" -> playerAttack();
+            case "1" -> playerAttack(player);
             case "2" -> playerItems();
             case "3" -> playerFlee();
         }
@@ -77,13 +78,42 @@ public class CombatHandler {
 
     }
 
-    private void playerAttack() {
+    private void playerAttack(Player player) {
+        System.out.println("Choose an Attack:");
+        for(int i = 0; i < player.getWeapon().getMoves().length; i++) {
+            System.out.println(i + ". " + player.getWeapon().getMoves()[i].toString());
+        }
+        int input = userInputNumber(player.getWeapon().getMoves().length);
+        System.out.println("You chose to " + expressionByMove(player.getWeapon().getMoveByIndex(input)) + " with your " + player.getWeapon().getName() + "!");
+        System.out.println("Which enemy do you want to hit?");
+        System.out.println();
     }
 
     private void playerItems() {
     }
 
     private void playerFlee() {
+    }
+
+    private int userInputNumber(int i) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        while (!input.matches("[0-9]*") && Integer.parseInt(input) < 0 && Integer.parseInt(input) >= i){
+            System.out.println("Invalid number, again:");
+            input = sc.nextLine();
+        }
+        return Integer.parseInt(input);
+    }
+
+    private String expressionByMove(MoveTypes moveTypes) {
+        return switch (moveTypes) {
+
+            case THROW -> "throw";
+            case HIT -> "hit with";
+            case FIRE -> "fire with";
+            case STAB -> "stab with";
+            case HIT_ON_HEAD -> "hit on head";
+        };
     }
 
 }

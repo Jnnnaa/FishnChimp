@@ -12,8 +12,7 @@ public class GameProtocol {
     private Player player;
     public String coolName;
     private CombatHandler combatHandler;
-
-    public Storyyy storyyy = new Storyyy();;
+    public Storyyy storyyy = new Storyyy();
 
 
 

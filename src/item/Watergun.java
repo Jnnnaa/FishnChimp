@@ -24,4 +24,14 @@ public class Watergun extends Item implements Weapon {
     public int getDamage(MoveTypes moveTypes) {
         return damage;
     }
+
+    @Override
+    public MoveTypes getMoveByIndex(int i) {
+        return moveTypes[i];
+    }
+
+    @Override
+    public String getName() {
+        return "Watergun";
+    }
 }

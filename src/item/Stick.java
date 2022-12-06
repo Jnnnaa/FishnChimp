@@ -25,4 +25,14 @@ public class Stick extends Item implements Weapon{
         return damage;
     }
 
+    @Override
+    public MoveTypes getMoveByIndex(int i) {
+        return moveTypes[i];
+    }
+
+    @Override
+    public String getName() {
+        return "Stick";
+    }
+
 }
