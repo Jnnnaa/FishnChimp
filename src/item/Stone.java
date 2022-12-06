@@ -2,9 +2,11 @@ package item;
 
 public class Stone extends Item implements Weapon{
     MoveTypes[] moveTypes;
+    private int damage;
 
     public Stone() {
         setMoveTypes();
+        damage = 1;
     }
     private void setMoveTypes() {
 
@@ -17,6 +19,10 @@ public class Stone extends Item implements Weapon{
         return moveTypes;
     }
 
+    @Override
+    public int getDamage(MoveTypes moveTypes) {
+        return damage;
+    }
 
 
 }

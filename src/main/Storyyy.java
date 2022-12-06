@@ -17,13 +17,18 @@ public class Storyyy {
      */
     public static void separateString(String comeOnPutSomeStringInHere) {
         StringBuilder originalString = new StringBuilder(comeOnPutSomeStringInHere);
-        while (!comeOnPutSomeStringInHere.equals("")) {
+        outer: while (!comeOnPutSomeStringInHere.equals("")) {
             for (int i = 50; i >= 0; i--) {
-                if (comeOnPutSomeStringInHere.charAt(i) == ' ') {
-                    String sub_str_1 = comeOnPutSomeStringInHere.substring(0, i);
-                    System.out.println(sub_str_1);
-                    comeOnPutSomeStringInHere = originalString.replace(0, i + 1, "").toString();
-                    i=50;
+                if (i < comeOnPutSomeStringInHere.length()) {
+                    if (comeOnPutSomeStringInHere.charAt(i) == ' ') {
+                        String sub_str_1 = comeOnPutSomeStringInHere.substring(0, i);
+                        System.out.println(sub_str_1);
+                        comeOnPutSomeStringInHere = originalString.replace(0, i + 1, "").toString();
+                        i = 50;
+                    }
+                } else {
+                    System.out.println(comeOnPutSomeStringInHere);
+                    break outer;
                 }
             }
         }

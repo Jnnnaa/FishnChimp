@@ -34,8 +34,9 @@ public class Player {
         return isAlive;
     }
 
-    public void setActiveWeapon(Weapon weapon) {
+    public boolean setActiveWeapon(Weapon weapon) {
         this.activeWeapon = weapon;
+        return true;
     }
 
     public Weapon getWeapon(){

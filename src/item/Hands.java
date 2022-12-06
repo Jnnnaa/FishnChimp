@@ -7,7 +7,8 @@ public class Hands extends Item implements Weapon{
     }
 
     @Override
-    public MoveTypes getMoveByIndex() {
-        return null;
+    public int getDamage(MoveTypes moveTypes) {
+
+        return 0;
     }
 }

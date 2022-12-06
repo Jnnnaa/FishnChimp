@@ -9,9 +9,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GameProtocol {
     private Gamestate gamestate;
-    Player player;
+    private Player player;
     public String coolName;
-    CombatHandler combatHandler;
+    private CombatHandler combatHandler;
 
     public Storyyy storyyy = new Storyyy();;
 
@@ -30,10 +30,9 @@ public class GameProtocol {
     private void gameLoop() {
         while (player.getIsAlive()) {
             if (gamestate == Gamestate.STORYTELLING) {
-
-
+                storyyy.textAtTheBeginning();
             } else if (gamestate == Gamestate.COMBAT) {
-                combatHandler.startCombat(gamestate, player);
+                combatHandler.startCombat(player, this);
             }
         }
     }
@@ -67,7 +66,7 @@ public class GameProtocol {
 
         String weaponNumber = sc.next();
 
-        while (!weaponNumber.matches("1+2+3")) {
+        while (!weaponNumber.matches("1??2??3??")) {
             System.out.println("Invalid number, again:");
             weaponNumber = sc.next();
         }
@@ -84,4 +83,11 @@ public class GameProtocol {
         System.out.println("Welcome " + coolName + ",your journey starts here! You have " + getNumberOfCoins() + " coins :)");
     }
 
+    public void setGamestate(Gamestate gamestate) {
+        this.gamestate = gamestate;
+    }
+
+    public Gamestate getGamestate() {
+        return gamestate;
+    }
 }

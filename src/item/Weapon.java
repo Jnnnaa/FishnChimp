@@ -11,7 +11,7 @@ public interface Weapon {
 
     public MoveTypes[] getMoves();
 
-    public int getDamage(WeaponType weapon, MoveTypes moveTypes);
+    public int getDamage(MoveTypes moveTypes);
 
     private void setDamage(){};
 

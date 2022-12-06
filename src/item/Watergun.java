@@ -3,8 +3,10 @@ package item;
 public class Watergun extends Item implements Weapon {
     MoveTypes[] moveTypes;
 
+    private int damage;
     public Watergun() {
         setMoveTypes();
+        damage = 1;
     }
 
     private void setMoveTypes() {
@@ -16,5 +18,10 @@ public class Watergun extends Item implements Weapon {
 
     public MoveTypes[] getMoves() {
         return moveTypes;
+    }
+
+    @Override
+    public int getDamage(MoveTypes moveTypes) {
+        return damage;
     }
 }
